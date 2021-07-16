@@ -1,0 +1,22 @@
+{
+  "name": "fastui",
+  "version": "0.0.1",
+  "description": "vue ui component",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vfastui/fastui.git"
+  },
+  "author": "airene",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vfastui/fastui/issues"
+  },
+  "homepage": "https://github.com/vfastui/fastui#readme",
+  "devDependencies": {
+    "vite": "^2.4.2",
+    "vue": "^3.1.4"
+  }
+}
