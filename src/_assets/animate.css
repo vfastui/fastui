@@ -1,0 +1,21 @@
+
+/*f-model*/
+.f-modal-show-scale-enter-from,
+.f-modal-show-scale-leave-to{
+    transform: scale(.9);
+    opacity: 0;
+}
+.f-modal-show-scale-enter-active,
+.f-modal-show-scale-leave-active{
+    transition: all .25s;
+}
+
+/*f-modal-mask*/
+.f-modal-mask-fade-enter-from,
+.f-modal-mask-fade-leave-to{
+    opacity: 0;
+}
+.f-modal-mask-fade-enter-active,
+.f-modal-mask-fade-leave-active{
+    transition: all .25s ease-out;
+}

@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2686449 */
+  src: url('iconfont.woff2?t=1626749010117') format('woff2'),
+       url('iconfont.woff?t=1626749010117') format('woff'),
+       url('iconfont.ttf?t=1626749010117') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-adduser:before {
+  content: "\e7ae";
+}
+
+.icon-deleteteam:before {
+  content: "\e7af";
+}
+
+.icon-deleteuser:before {
+  content: "\e7b0";
+}
+
+.icon-addteam:before {
+  content: "\e7b1";
+}
+
+.icon-sever:before {
+  content: "\e7b2";
+}
+
+.icon-close:before {
+  content: "\e7fc";
+}
+
+.icon-minus:before {
+  content: "\e7fd";
+}
+
+.icon-alipay:before {
+  content: "\e87c";
+}
+
+.icon-Gitlab-fill:before {
+  content: "\e881";
+}
+
+.icon-dropbox:before {
+  content: "\e882";
+}
+
+.icon-apple-fill:before {
+  content: "\e883";
+}
+
+.icon-twitter:before {
+  content: "\e884";
+}
+
+.icon-skype-fill:before {
+  content: "\e885";
+}
+
+.icon-wechat-fill:before {
+  content: "\e886";
+}
+
+.icon-chrome-fill:before {
+  content: "\e887";
+}
+
+.icon-github-fill:before {
+  content: "\e888";
+}
+
+.icon-dribbble-circle-fill:before {
+  content: "\e889";
+}
+
+.icon-IE-circle-fill:before {
+  content: "\e88a";
+}
+
+.icon-audio:before {
+  content: "\e897";
+}
+
+.icon-zoomin:before {
+  content: "\e898";
+}
+

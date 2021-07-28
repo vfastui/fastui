@@ -1,0 +1,4 @@
+{
+  "button": "button/index.ts",
+  "modal": "modal/index.ts"
+}
