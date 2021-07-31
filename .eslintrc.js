@@ -17,5 +17,13 @@ module.exports = {
     plugins: ['vue', '@typescript-eslint'],
     rules: {
         'array-bracket-newline': ['error', 'consistent']
-    }
+    },
+    overrides: [
+        {
+            files: ['**/*.spec.js', '**/*.spec.jsx'],
+            env: {
+                jest: true
+            }
+        }
+    ]
 }

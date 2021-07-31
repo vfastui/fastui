@@ -85,7 +85,7 @@ export default defineComponent({
 })
 </script>
 
-<style scoped lang="less">
+<style lang="less">
 @import '../_themes/light.less';
 .f-btn {
     padding: 10px 16px;

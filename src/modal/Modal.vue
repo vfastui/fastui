@@ -144,7 +144,7 @@ export default defineComponent({
     }
 })
 </script>
-<style scoped lang="less">
+<style lang="less">
 .f-modal-container {
     position: fixed;
     left: 0;
