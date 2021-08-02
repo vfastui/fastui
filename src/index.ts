@@ -1,8 +1,8 @@
 // import Button from './button'
 // import Modal from './modal'
 
-export { default as Button } from './button'
-export { default as Modal } from './modal'
+export * from './button'
+export * from './modal'
 // const components: any = {
 //     FButton: Button,
 //     FModal: Modal

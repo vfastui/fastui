@@ -3,28 +3,29 @@
     "version": "0.0.1",
     "description": "vue ui component",
     "main": "./dist/fastui.umd.js",
-    "module": "./dist/fastui.es.js",
+    "module": "./dist/index.js",
     "files": [
-        "dist","src"
+        "dist"
     ],
-
     "scripts": {
         "doc:dev": "vitepress dev docs --host 0.0.0.0",
         "build": "vitepress build",
         "serve": "vitepress serve",
         "clean": "rimraf lib",
-        "build:style": "gulp --gulpfile build/gen-style.js",
+        "build:css": "gulp --gulpfile build/gulpcss.js",
         "build:com": "webpack --config build/webpack.component.js",
         "build:prod": "webpack --config build/webpack.prod.js --stats-error-details",
         "dist": "npm run test && npm run build:style && npm run build:prod && npm run build:components",
         "deploy:build": "npm run docs:build && npm run deploy",
         "test": "jest",
-        "build:rollup": "vite build"
+        "build:rollup": "vite build",
+        "rollup": "rollup -c"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/vfastui/fastui.git"
     },
+    "sideEffects": true,
     "author": "airene",
     "license": "MIT",
     "bugs": {
@@ -34,6 +35,9 @@
     "devDependencies": {
         "@babel/preset-env": "^7.14.8",
         "@babel/preset-typescript": "^7.14.5",
+        "@rollup/plugin-alias": "^3.1.5",
+        "@rollup/plugin-commonjs": "^20.0.0",
+        "@rollup/plugin-node-resolve": "^13.0.4",
         "@testing-library/jest-dom": "^5.14.1",
         "@testing-library/vue": "^5.8.1",
         "@types/jest": "^26.0.24",
@@ -51,10 +55,20 @@
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-prettier": "^3.4.0",
         "eslint-plugin-vue": "^7.14.0",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.0",
+        "gulp-clean-css": "^4.2.0",
+        "gulp-less": "^5.0.0",
+        "gulp-rename": "^1.4.0",
+        "gulp-sass": "^4.0.2",
         "jest": "^27.0.6",
         "less": "^4.1.1",
         "less-loader": "^10.0.1",
         "prettier": "^2.3.2",
+        "rollup-plugin-css-only": "^3.1.0",
+        "rollup-plugin-esbuild": "^4.5.0",
+        "rollup-plugin-less": "^1.1.3",
+        "rollup-plugin-vue": "^6.0.0",
         "style-loader": "^3.2.1",
         "ts-jest": "^27.0.4",
         "ts-loader": "^9.2.4",

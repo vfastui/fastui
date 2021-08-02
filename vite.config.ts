@@ -1,5 +1,9 @@
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import VuePlugin from 'rollup-plugin-vue'
+import commonjs from '@rollup/plugin-commonjs'
+import resolve1 from '@rollup/plugin-node-resolve'
+import esbuild from 'rollup-plugin-esbuild'
 // @ts-ignore
 import debugPrettier from 'debug'
 import { resolve } from 'path'
@@ -27,17 +31,33 @@ export default defineConfig({
     build: {
         target: 'esnext',
         lib: {
-            entry: 'src/index.ts',
-            name: 'fast-ui'
+            entry: 'src/button/index.ts',
+            name: 'fast-ui',
+            formats: ['es']
+            //fileName: (format) => `my-lib.${format}.js`
         },
         minify: false,
         rollupOptions: {
             external: 'vue',
+            input: [
+                '/Users/airene/workspace/fastui/src/button/index.ts',
+                '/Users/airene/workspace/fastui/src/modal/index.ts'
+            ],
             output: {
+                format: 'es',
                 globals: {
                     vue: 'Vue'
-                }
-            }
+                },
+                //preserveModules: true,
+                entryFileNames: '[name].js'
+            },
+            plugins: [
+                resolve1({ extensions: ['.vue'] }),
+                esbuild(),
+                VuePlugin({
+                    include: /\.vue$/
+                })
+            ]
         }
     }
 })
