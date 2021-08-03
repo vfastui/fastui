@@ -1,20 +1,27 @@
 import DefaultTheme from 'vitepress/theme'
 
 import NewLayout from './components/NewLayout.vue'
-import Button from '@/button'
-import Modal from '@/modal'
 
-import '@/_assets/animate.css'
+import Button from './button/button.vue'
+import Modal from './modal/modal.vue'
+const components = {
+    FButton: Button,
+    FModal: Modal
+}
+
+const install = function (Vue) {
+    Object.keys(components).forEach((key) => {
+        Vue.component(key, components[key])
+    })
+}
+
 import './custom.css'
-import '@/_assets/iconfont.css'
-import '@/_themes/light.less'
 
 export default {
     ...DefaultTheme,
     Layout: NewLayout,
     enhanceApp({ app }) {
         // register global compoment
-        app.use(Button)
-        app.use(Modal)
+        app.use(install)
     }
 }

@@ -1,4 +1,5 @@
 const path = require('path')
+
 async function config() {
     return {
         title: 'FastUI.dev',
@@ -7,9 +8,9 @@ async function config() {
         themeConfig: {
             website: 'https://fastui.dev',
             nav: [
-                { text: 'Home', link: '/' },
-                { text: '组件', link: '/components/' },
-                { text: 'Github', link: 'https://github.com/vfastui/fastui/' }
+                {text: 'Home', link: '/'},
+                {text: '组件', link: '/components/'},
+                {text: 'Github', link: 'https://github.com/vfastui/fastui/'}
             ]
         },
         srcExclude: ['README.md'],

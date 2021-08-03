@@ -5,7 +5,7 @@
         "moduleResolution": "node",
         "strict": true,
         "jsx": "preserve",
-        "sourceMap": true,
+        "sourceMap": false,
         "resolveJsonModule": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
@@ -14,7 +14,8 @@
         "baseUrl": "./",
         "paths": {
             "@/*": ["src/*"]
-        }
+        },
+        "outDir": "dist"
     },
     "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
     "exclude": ["dist", "node_modules"]

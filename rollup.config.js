@@ -9,14 +9,14 @@ import path from 'path'
 const projectRootDir = path.resolve(__dirname)
 export default {
     external: 'vue',
-    input: { button: 'src/button/index.ts', modal: 'src/modal/index.ts' },
+    input: { button: 'src/button/button.vue', modal: 'src/modal/modal.vue' },
     output: {
         format: 'es',
         globals: {
             vue: 'Vue'
         },
         dir: 'dist',
-        entryFileNames: '[name]/[name].js'
+        entryFileNames: '[name]/index.js'
     },
     plugins: [
         alias({
