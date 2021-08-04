@@ -2,8 +2,8 @@ import DefaultTheme from 'vitepress/theme'
 
 import NewLayout from './components/NewLayout.vue'
 
-import Button from './button/button.vue'
-import Modal from './modal/modal.vue'
+import Button from '@/button/button.vue'
+import Modal from '@/modal/modal.vue'
 const components = {
     FButton: Button,
     FModal: Modal

@@ -9,8 +9,8 @@
     ],
     "scripts": {
         "doc:dev": "vitepress dev docs --host 0.0.0.0",
-        "doc:build": "vitepress build",
-        "doc:serve": "vitepress serve",
+        "doc:build": "vitepress build docs",
+        "doc:serve": "vitepress serve docs",
         "clean": "rimraf dist",
         "build:css": "gulp --gulpfile build/gen-css.js",
         "build:components": "rollup -c",
