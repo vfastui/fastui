@@ -19,6 +19,10 @@ const componentList = [
         name: '模态框',
         link: 'modal.html'
     },
+    {
+        name: '栅格',
+        link: 'grid.html'
+    },
 ]
 
 </script>

@@ -1,5 +1,5 @@
-@import '../_themes/light.less';
-.f-modal-container {
+@import '../theme.less';
+.f-modal-wrapper {
     position: fixed;
     left: 0;
     top: 0;
@@ -10,7 +10,7 @@
     position: relative;
     box-sizing: border-box;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: var(--f-background);
     z-index: 1000;
     border-radius: 5px;
     box-shadow: var(--f-shadow-2);
@@ -22,13 +22,6 @@
     & > div {
         box-sizing: border-box;
     }
-    .closeIcon {
-        position: absolute;
-        right: 19px;
-        top: 14px;
-        cursor: pointer;
-        color: #666;
-    }
     .f-modal-header {
         display: inline-flex;
         align-items: center;
@@ -39,6 +32,13 @@
         white-space: nowrap;
         overflow: hidden;
         border-bottom: 1px var(--f-border-color) solid;
+    }
+    .closeIcon {
+        position: absolute;
+        right: 19px;
+        top: 14px;
+        cursor: pointer;
+        color: var(--f-font-color);
     }
     .f-modal-body {
         flex-grow: 1;
@@ -60,13 +60,33 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
 }
-.f-modal-mask.isShow {
-    display: block;
-    z-index: 999;
+//.f-modal-mask.isShow {
+//    display: block;
+//    z-index: 999;
+//}
+
+.f-modal-mask-fade-enter-from,
+.f-modal-mask-fade-leave-to{
+    opacity: 0;
 }
+.f-modal-mask-fade-enter-active,
+.f-modal-mask-fade-leave-active{
+    transition: all .15s ease-out;
+}
+.f-modal-show-scale-enter-from,
+.f-modal-show-scale-leave-to{
+    transform: scale(.9);
+    opacity: 0;
+}
+.f-modal-show-scale-enter-active,
+.f-modal-show-scale-leave-active{
+    transition: all .15s;
+}
+/* 无法关闭的动画
 .f-modal__not_close {
     transform: scale(1.03);
     transition: all 0.5s;
 }
+*/

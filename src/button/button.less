@@ -1,6 +1,5 @@
-@import '../_themes/light.less';
+@import '../theme.less';
 @import '../_assets/iconfont.css';
-@import '../_assets/animate.css';
 
 .f-btn {
     padding: 10px 16px;
@@ -15,38 +14,24 @@
     outline: 0;
     font-size: 14px;
     line-height: 1;
-    transition: all 0.1s;
+    transition: all .1s;
     box-sizing: border-box;
-}
-
-.f-btn-icon.f-btn {
-    padding: 12px;
-}
-
-.f-btn + .f-btn {
-    margin-left: 10px;
-}
-
-.f-btn-icon {
-    font-size: 14px;
-    color: inherit;
 }
 
 .f-btn--default {
     background-color: var(--f-background);
     border-color: var(--f-border-color);
     color: var(--f-font-color);
-
     &:hover,
     &:focus,
     &:active {
-        border-color: var(--f-primary);
         color: var(--f-primary);
+        border-color: var(--f-primary);
     }
 
     &.is-disabled {
-        color: lighten(@font-color, 50%);
-        border-color: lighten(@font-color, 70%);
+        color: var(--f-default-disabled);
+        border-color: var(--f-border-color);
     }
 }
 
@@ -58,144 +43,139 @@
     &:hover,
     &:focus,
     &:active {
-        background-color: lighten(@primary-color, 10%);
-        border-color: lighten(@primary-color, 10%);
+        background-color: var(--f-primary-hover);
+        border-color: var(--f-primary-hover);
     }
 
     &.is-disabled {
-        background-color: lighten(@primary-color, 20%);
-        border-color: lighten(@primary-color, 20%);
+        background-color: var(--f-primary-disabled);
+        border-color: var(--f-primary-disabled);
     }
 
     &.f-btn--ghost {
         color: var(--f-primary);
         border-color: var(--f-primary);
-
         &:hover,
         &:focus,
         &:active {
-            background-color: var(--f-background);
-            border-color: lighten(@primary-color, 20%);
+            background-color: transparent;
+            border-color: var(--f-primary-disabled);
         }
     }
 }
 
 .f-btn--success {
-    color: #fff;
+    color: var(--f-background);
     background-color: var(--f-success);
     border-color: var(--f-success);
 
     &:hover,
     &:focus,
     &:active {
-        background-color: lighten(@success-color, 10%);
-        border-color: lighten(@success-color, 10%);
+        background-color: var(--f-success-hover);
+        border-color: var(--f-success-hover);
     }
 
     &.is-disabled {
-        background-color: lighten(@success-color, 30%);
-        border-color: lighten(@success-color, 30%);
+        background-color: var(--f-success-disabled);
+        border-color: var(--f-success-disabled);
     }
 
     &.f-btn--ghost {
         color: var(--f-success);
         border-color: var(--f-success);
-
         &:hover,
         &:focus,
         &:active {
-            background-color: var(--f-background);
-            border-color: lighten(@success-color, 10%);
+            background-color: transparent;
+            border-color: var(--f-success-disabled);
         }
     }
 }
 
 .f-btn--warning {
-    color: #fff;
+    color: var(--f-background);
     background-color: var(--f-warning);
     border-color: var(--f-warning);
 
     &:hover,
     &:focus,
     &:active {
-        background-color: lighten(@warning-color, 10%);
-        border-color: lighten(@warning-color, 10%);
+        background-color: var(--f-warning-hover);
+        border-color: var(--f-warning-hover);
     }
 
     &.is-disabled {
-        background-color: lighten(@warning-color, 20%);
-        border-color: lighten(@warning-color, 20%);
+        background-color: var(--f-warning-disabled);
+        border-color: var(--f-warning-disabled);
     }
 
     &.f-btn--ghost {
         color: var(--f-warning);
         border-color: var(--f-warning);
-
         &:hover,
         &:focus,
         &:active {
-            background-color: var(--f-background);
-            border-color: lighten(@warning-color, 20%);
+            background-color: transparent;
+            border-color: var(--f-warning-disabled);
         }
     }
 }
 
 .f-btn--danger {
-    color: #fff;
+    color: var(--f-background);
     background-color: var(--f-danger);
     border-color: var(--f-danger);
 
     &:hover,
     &:focus,
     &:active {
-        background-color: lighten(@danger-color, 10%);
-        border-color: lighten(@danger-color, 10%);
+        background-color: var(--f-danger-hover);
+        border-color: var(--f-danger-hover);
     }
 
     &.is-disabled {
-        background-color: lighten(@danger-color, 25%);
-        border-color: lighten(@danger-color, 25%);
+        background-color: var(--f-danger-disabled);
+        border-color: var(--f-danger-disabled);
     }
 
     &.f-btn--ghost {
         color: var(--f-danger);
         border-color: var(--f-danger);
-
         &:hover,
         &:focus,
         &:active {
-            background-color: var(--f-background);
-            border-color: lighten(@danger-color, 20%);
+            background-color: transparent;
+            border-color: var(--f-danger-disabled);
         }
     }
 }
 
 .f-btn--info {
-    color: #fff;
+    color: var(--f-background);
     background-color: var(--f-info);
     border-color: var(--f-info);
 
     &:hover,
     &:focus,
     &:active {
-        background-color: lighten(@info-color, 10%);
-        border-color: lighten(@info-color, 10%);
+        background-color: var(--f-info-hover);
+        border-color: var(--f-info-hover);
     }
 
     &.is-disabled {
-        background-color: lighten(@info-color, 15%);
-        border-color: lighten(@info-color, 15%);
+        background-color: var(--f-info-disabled);
+        border-color: var(--f-info-disabled);
     }
 
     &.f-btn--ghost {
         color: var(--f-info);
         border-color: var(--f-info);
-
         &:hover,
         &:focus,
         &:active {
-            background-color: var(--f-background);
-            border-color: lighten(@info-color, 20%);
+            background-color: transparent;
+            border-color: var(--f-info-disabled);
         }
     }
 }
@@ -204,19 +184,16 @@
     background-color: transparent;
     color: var(--f-primary);
     border: 0;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding: 14px 0 !important; // 还允许有尺寸的存在 加一个强制无边距
 
     &:hover,
     &:focus,
     &:active {
-        color: lighten(@primary-color, 10%);
+        color: var(--f-primary-hover);
     }
 
     &.is-disabled {
-        color: lighten(@primary-color, 20%);
+        color: var(--f-primary-disabled);
     }
 }
 
@@ -225,36 +202,45 @@
 }
 
 .f-btn--ghost {
-    background-color: #fff;
+    background-color: transparent ;
 }
 
 .f-btn--rounded {
-    border-radius: 20px;
+    border-radius: 60px;
+}
+
+// 按钮之间默认间隔
+.f-btn + .f-btn {
+    margin-left: 10px;
+}
+
+.f-btn-icon {
+    font-size: 14px;
 }
 
 .f-btn--mini {
-    padding: 6px 8px !important;
-    font-size: 12px !important;
+    padding: 6px 8px;
+    font-size: 12px;
 
     .f-btn-icon {
-        font-size: 12px !important;
+        font-size: 12px;
     }
 }
 
 .f-btn--small {
-    padding: 8px 12px !important;
-    font-size: 12px !important;
+    padding: 8px 12px;
+    font-size: 12px;
 
     .f-btn-icon {
-        font-size: 12px !important;
+        font-size: 12px;
     }
 }
 
 .f-btn--large {
-    padding: 11px 22px !important;
-    font-size: 16px !important;
+    padding: 11px 22px;
+    font-size: 16px;
 
     .f-btn-icon {
-        font-size: 16px !important;
+        font-size: 16px;
     }
 }

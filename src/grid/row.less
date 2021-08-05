@@ -1,0 +1,38 @@
+.f-row {
+    display: flex;
+}
+
+.f-row--warp {
+    flex-wrap: wrap;
+}
+
+.f-row--noWarp {
+    flex-wrap: nowrap;
+}
+
+@justifyContent: {
+    start: flex-start;
+    center: center;
+    end: flex-end;
+    space-between: space-between;
+    space-around: space-around;
+};
+each(@justifyContent, {
+    .f-row--justify-content--@{key} {
+        justify-content: @value;
+    }
+})
+
+@alignItems: {
+    start: flex-start;
+    center: center;
+    end: flex-end;
+    stretch: stretch;
+    baseline: baseline;
+}
+
+each(@alignItems, {
+    .f-row--align-items--@{key} {
+        align-items: @value;
+    }
+});

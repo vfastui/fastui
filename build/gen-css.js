@@ -14,6 +14,18 @@ function buildSeperateCss(cb) {
             .pipe(rename(`${compName}.css`))
             .pipe(gulp.dest(`../dist/${compName}`))
     })
+    gulp.src(`../src/grid/col.less`)
+        .pipe(less())
+        .pipe(autoprefixer())
+        .pipe(cleanCSS())
+        .pipe(rename(`col.css`))
+        .pipe(gulp.dest(`../dist/col`))
+    // gulp.src(`../src/grid/row.less`)
+    //     .pipe(less())
+    //     .pipe(autoprefixer())
+    //     .pipe(cleanCSS())
+    //     .pipe(rename(`row.css`))
+    //     .pipe(gulp.dest(`../dist/row`))
 
     cb()
 }

@@ -1,0 +1,11 @@
+each(range(24), {
+    .f-col--@{value} {
+        width: (100%/24*@value);
+    }
+})
+
+each(range(24), {
+    .f-col--offset-@{value} {
+        width: (100%/24*@value);
+    }
+})

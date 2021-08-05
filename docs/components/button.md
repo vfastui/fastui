@@ -9,15 +9,17 @@ description: Button Demo
 <FButton>默认</FButton>
 <FButton type="primary">Primary</FButton>
 <FButton type="success">Success</FButton>
-<FButton type="warning">Waring</FButton>
+<FButton type="warning">Warning</FButton>
 <FButton type="danger">Danger</FButton>
+<FButton type="text">文字Text</FButton>
 <FButton type="info">Info</FButton>
 ```html
 <FButton>默认</FButton>
 <FButton type="primary">Primary</FButton>
 <FButton type="success">Success</FButton>
-<FButton type="warning">Waring</FButton>
+<FButton type="warning">Warning</FButton>
 <FButton type="danger">Danger</FButton>
+<FButton type="text">文字Text</FButton>
 <FButton type="info">Info</FButton>
 ```
 
@@ -27,7 +29,7 @@ description: Button Demo
 <FButton ghost>默认</FButton>
 <FButton type="primary" ghost>Primary</FButton>
 <FButton type="success" ghost>Success</FButton>
-<FButton type="warning" ghost>Waring</FButton>
+<FButton type="warning" ghost>Warning</FButton>
 <FButton type="danger" ghost>Danger</FButton>
 <FButton type="info" ghost>Info</FButton>
 
@@ -38,7 +40,7 @@ description: Button Demo
 <FButton disabled>默认</FButton>
 <FButton type="primary" disabled>Primary</FButton>
 <FButton type="success" disabled>Success</FButton>
-<FButton type="warning" disabled>Waring</FButton>
+<FButton type="warning" disabled>Warning</FButton>
 <FButton type="danger" disabled>Danger</FButton>
 <FButton type="info" disabled>Info</FButton>
 
@@ -47,10 +49,10 @@ description: Button Demo
 `rounded`可以变成圆角按钮  
 
 <FButton rounded>默认</FButton>
-<FButton type="primary" rounded>Primary</FButton>
+<FButton type="primary" rounded>P</FButton>
 <FButton type="success" rounded>Success</FButton>
-<FButton type="warning" rounded>Waring</FButton>
-<FButton type="danger" rounded>Danger</FButton>
+<FButton type="warning" rounded>Warning</FButton>
+<FButton type="danger" rounded icon="icon-adduser"></FButton>
 <FButton type="info" rounded>Info</FButton>
 
 ## 尺寸
@@ -68,6 +70,7 @@ description: Button Demo
 ## 图标
 
 - TODO 字体大小需要解决一下 示例先留着 -- normal的大小需要调整 现在icon太小了
+- disabled 初始化逻辑问题
 
 <FButton size="mini">Text</FButton>
 <FButton size="mini" icon="icon-adduser"></FButton>
@@ -95,7 +98,8 @@ description: Button Demo
 ## 文字按钮
 
 <FButton type="text">Text</FButton>
-<FButton type="text" icon="icon-adduser">很好</FButton>
+<FButton type="text" disabled icon="icon-adduser">很好</FButton>
+<FButton type="text" icon="icon-adduser" size="large">很好</FButton>
 
 
 

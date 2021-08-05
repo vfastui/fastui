@@ -4,9 +4,13 @@ import NewLayout from './components/NewLayout.vue'
 
 import Button from '@/button/button.vue'
 import Modal from '@/modal/modal.vue'
+import Row from '@/grid/row.vue'
+import Col from '@/grid/col.vue'
 const components = {
     FButton: Button,
-    FModal: Modal
+    FModal: Modal,
+    FRow:Row,
+    FCol:Col
 }
 
 const install = function (Vue) {

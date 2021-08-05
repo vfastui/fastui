@@ -1,15 +1,15 @@
 <template>
     <button
         ref="buttonDom"
-        :class="['f-btn', ...getClassName, ...isRounded, ...btnSize, ...isOutline, ...isOneIcon]"
+        :class="['f-btn', ...getThemeName, ...btnSize, ...isRounded, ...isGhost, ...isPureIcon]"
         type="button"
         :disabled="disabled ? 'disabled' : ''"
     >
         <i
             v-if="icon"
-            :class="icon"
             class="iconfont f-btn-icon"
-            :style="`margin-right: ${$slots.default ? '5px' : ''};`"
+            :class="icon"
+            :style="`margin-right: ${$slots.default ? '4px' : ''};`"
         ></i>
         <slot></slot>
     </button>
@@ -20,8 +20,14 @@ import { defineComponent, ref, computed, onMounted } from 'vue'
 
 export default defineComponent({
     props: {
-        type: String,
-        icon: String,
+        type: {
+            type: String,
+            default: 'default'
+        },
+        icon: {
+            type: String,
+            default: ''
+        },
         disabled: Boolean,
         rounded: Boolean,
         ghost: Boolean,
@@ -30,11 +36,12 @@ export default defineComponent({
             default: 'normal'
         }
     },
-    setup({ type, disabled, rounded, size, ghost, icon }, { slots }) {
+    setup({ type, icon, disabled, rounded, size, ghost }, { slots }) {
         const buttonDom = ref(null)
 
-        const getClassName = computed(() => {
-            let color: any = {
+        const getThemeName = computed(() => {
+            let theme: Record<string, string> = {
+                default: 'f-btn--default',
                 primary: 'f-btn--primary',
                 success: 'f-btn--success',
                 danger: 'f-btn--danger',
@@ -42,17 +49,8 @@ export default defineComponent({
                 warning: 'f-btn--warning',
                 text: 'f-btn--text'
             }
-            if (!type) return disabled ? ['f-btn--default', 'is-disabled'] : ['f-btn--default']
-            if (disabled) return [color[type], 'is-disabled']
-            return [color[type]]
-        })
-
-        const isOutline = computed(() => {
-            return ghost ? ['f-btn--ghost'] : []
-        })
-
-        const isRounded = computed(() => {
-            return rounded ? ['f-btn--rounded'] : []
+            if (disabled) return [theme[type], 'is-disabled']
+            return [theme[type]]
         })
 
         const btnSize = computed(() => {
@@ -65,7 +63,15 @@ export default defineComponent({
             return [sizeObj[size]]
         })
 
-        const isOneIcon = computed(() => {
+        const isRounded = computed(() => {
+            return rounded ? ['f-btn--rounded'] : []
+        })
+
+        const isGhost = computed(() => {
+            return ghost ? ['f-btn--ghost'] : []
+        })
+
+        const isPureIcon = computed(() => {
             return icon && !slots.default ? ['f-btn-icon'] : []
         })
 
@@ -74,12 +80,12 @@ export default defineComponent({
             !disabled && dom.removeAttribute('disabled')
         })
         return {
-            getClassName,
             buttonDom,
-            isRounded,
+            getThemeName,
             btnSize,
-            isOneIcon,
-            isOutline
+            isRounded,
+            isGhost,
+            isPureIcon
         }
     }
 })
