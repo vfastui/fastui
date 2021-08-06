@@ -1,5 +1,5 @@
 <template>
-    <div :class="['f-row', ...getJustifyContent, ...getWrap, ...getAlignItems]" :style="getRowStyle">
+    <div :class="['f-row', `f-row--justify--${justify}`, `f-row--align--${align}`, getWrap]" :style="getRowStyle">
         <slot></slot>
     </div>
 </template>
@@ -9,65 +9,41 @@ import { defineComponent, computed, provide, ref } from 'vue'
 export default defineComponent({
     name: 'FRow',
     props: {
-        justifyContent: {
+        justify: {
             type: String,
             default: 'start',
             validator: (value: string) => ['start', 'center', 'end', 'space-between', 'space-around'].includes(value)
         },
-        gutter: {
-            type: [Number, String],
-            default: 0
+        align: {
+            type: String,
+            default: 'top',
+            validator: (value: string) => ['top', 'middle', 'bottom'].includes(value)
         },
         wrap: {
             type: Boolean,
             default: true
         },
-        alignItems: {
-            type: String,
-            default: 'start',
-            validator: (value: string) => ['start', 'center', 'end', 'baseline', 'stretch'].includes(value)
+        gutter: {
+            type: Number,
+            default: 0
         }
     },
-    setup({ justifyContent, gutter, wrap, alignItems }) {
-        const getJustifyContent = computed(() => {
-            const type: any = {
-                start: 'f-row--justify-content--start',
-                center: 'f-row--justify-content--center',
-                'space-between': 'f-row--justify-content--space-between',
-                'space-around': 'f-row--justify-content--space-around',
-                end: 'f-row--justify-content--end'
-            }
-            return [type[justifyContent] || type['start']]
-        })
-
-        const getAlignItems = computed(() => {
-            const type: any = {
-                start: 'f-row--align-items--start',
-                center: 'f-row--align-items--center',
-                end: 'f-row--align-items--end',
-                baseline: 'f-row--align-items--baseline',
-                stretch: 'f-row--align-items--stretch'
-            }
-            return [type[alignItems] || type['start']]
-        })
+    setup(props) {
         const getWrap = computed(() => {
-            return wrap ? ['f-row--warp'] : ['f-row--noWarp']
+            return props.wrap ? 'f-row--warp' : 'f-row--noWarp'
         })
-        const gutterNum = parseInt(gutter as string)
-        provide('gutter', ref(gutterNum))
+        provide('gutter', ref(props.gutter))
         const getRowStyle = computed(() => {
-            return gutterNum
+            return props.gutter
                 ? {
-                      marginRight: `-${gutterNum / 2}px`,
-                      marginLeft: `-${gutterNum / 2}px`
+                      marginRight: `-${props.gutter / 2}px`,
+                      marginLeft: `-${props.gutter / 2}px`
                   }
                 : {}
         })
         return {
-            getJustifyContent,
-            getRowStyle,
             getWrap,
-            getAlignItems
+            getRowStyle
         }
     }
 })

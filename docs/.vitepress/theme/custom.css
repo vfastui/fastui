@@ -152,3 +152,40 @@ h3 {
         margin-left: -1px;
     }
 }
+
+/*fast ui*/
+.f-row {
+    background: #fff;
+    margin-bottom: 10px;
+}
+.f-row >div:nth-child(even){
+    background: #eff6ff;
+    height:50px;
+}
+.f-row >div:nth-child(odd){
+    background: #dbeafe;
+    height:50px;
+}
+
+.align-div >div:nth-child(even){
+    height:50px;
+}
+.align-div >div:nth-child(odd){
+    height:80px;
+}
+
+.gutter-div >div:nth-child(even){
+    background: transparent;
+}
+.gutter-div >div:nth-child(odd){
+    background: transparent;
+}
+
+.div1{
+    background: #eff6ff;
+    height:50px;
+}
+.div2{
+    background: #dbeafe;
+    height:50px;
+}

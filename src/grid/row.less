@@ -10,29 +10,27 @@
     flex-wrap: nowrap;
 }
 
-@justifyContent: {
+@JustifyContent: {
     start: flex-start;
     center: center;
     end: flex-end;
     space-between: space-between;
     space-around: space-around;
 };
-each(@justifyContent, {
-    .f-row--justify-content--@{key} {
+each(@JustifyContent, {
+    .f-row--justify--@{key} {
         justify-content: @value;
     }
 })
 
-@alignItems: {
-    start: flex-start;
-    center: center;
-    end: flex-end;
-    stretch: stretch;
-    baseline: baseline;
+@AlignItems: {
+    top: flex-start;
+    middle: center;
+    bottom: flex-end;
 }
 
-each(@alignItems, {
-    .f-row--align-items--@{key} {
+each(@AlignItems, {
+    .f-row--align--@{key} {
         align-items: @value;
     }
 });
