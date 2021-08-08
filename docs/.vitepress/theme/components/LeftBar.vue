@@ -23,6 +23,10 @@ const componentList = [
         name: '栅格',
         link: 'grid.html'
     },
+    {
+        name: '提示',
+        link: 'tooltip.html'
+    },
 ]
 
 </script>

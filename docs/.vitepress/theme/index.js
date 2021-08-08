@@ -6,11 +6,13 @@ import Button from '@/button/button.vue'
 import Modal from '@/modal/modal.vue'
 import Row from '@/grid/row.vue'
 import Col from '@/grid/col.vue'
+import Tooltip from '@/tooltip/tooltip.vue'
 const components = {
     FButton: Button,
     FModal: Modal,
     FRow:Row,
-    FCol:Col
+    FCol:Col,
+    FTooltip:Tooltip
 }
 
 const install = function (Vue) {

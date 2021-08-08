@@ -18,6 +18,9 @@ module.exports = {
     rules: {
         'array-bracket-newline': ['error', 'consistent']
     },
+    globals: {
+        NodeJS: true // search nodejs.timer
+    },
     overrides: [
         {
             files: ['**/*.spec.js', '**/*.spec.jsx'],

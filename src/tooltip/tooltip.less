@@ -1,0 +1,45 @@
+.f-tooltip-wrapper {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.f-tooltip {
+    position: absolute;
+    font-size: 14px;
+    padding: 8px 12px;
+    display: inline-block;
+    white-space: nowrap;
+    z-index: 9999;
+    border-radius: 3px;
+    transform-origin: bottom;
+}
+.f-tooltip__dark {
+    color: var(--f-background);
+    background-color: var(--f-font-color);
+}
+.f-tooltip__light {
+    color: var(--f-font-color);
+    box-shadow: var(--f-shadow-1);
+    background-color: var(--f-background);
+}
+.f-tooltip-arrow,
+.f-tooltip-arrow__light {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    z-index: 2;
+}
+.f-tooltip-arrow__light {
+    z-index: 1;
+}
+
+
+.f-tooltip-fade-enter-from,
+.f-tooltip-fade-leave-to{
+    opacity: 0;
+}
+.f-tooltip-fade-enter-active,
+.f-tooltip-fade-leave-active{
+    transition: all .15s ease-out;
+}
