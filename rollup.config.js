@@ -8,8 +8,15 @@ import path from 'path'
 
 const projectRootDir = path.resolve(__dirname)
 export default {
+    input: {
+        button: 'src/button/button.vue',
+        modal: 'src/modal/modal.vue',
+        tag: 'src/tag/tag.vue',
+        row: 'src/row/row.vue',
+        col: 'src/col/col.vue',
+        tooltip: 'src/tooltip/tooltip.vue'
+    },
     external: 'vue',
-    input: { button: 'src/button/button.vue', modal: 'src/modal/modal.vue' },
     output: {
         format: 'es',
         globals: {

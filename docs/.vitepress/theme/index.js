@@ -7,12 +7,14 @@ import Modal from '@/modal/modal.vue'
 import Row from '@/grid/row.vue'
 import Col from '@/grid/col.vue'
 import Tooltip from '@/tooltip/tooltip.vue'
+import Tag from '@/tag/Tag.vue'
 const components = {
     FButton: Button,
     FModal: Modal,
     FRow:Row,
     FCol:Col,
-    FTooltip:Tooltip
+    FTooltip:Tooltip,
+    FTag:Tag
 }
 
 const install = function (Vue) {

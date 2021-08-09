@@ -1,0 +1,64 @@
+.f-tag{
+    box-sizing: border-box;
+    display: inline-flex;
+    height: 24px;
+    align-items: center;
+    padding: 0 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    color: var(--f-background);
+    & + & {
+        margin-left: 10px;
+    }
+}
+
+.f-tag--default{
+    color: var(--f-font-color);
+    border: 1px #d4d4d4 solid;
+    background-color: #fafaf9;
+}
+.f-tag--primary{
+    color:var(--f-primary);
+    border: 1px #93c5fd solid;
+    background-color: var(--f-primary-bg);
+}
+
+.f-tag--success{
+    color:var(--f-success);
+    border: 1px #bbf7d0 solid;
+    background-color: var(--f-success-bg);
+}
+
+.f-tag--warning{
+    color:var(--f-warning);
+    border: 1px #fed7aa solid;
+    background-color: var(--f-warning-bg);
+}
+
+.f-tag--danger{
+    color:var(--f-danger);
+    border: 1px #fecdd3 solid;
+    background-color: var(--f-danger-bg);
+}
+
+.f-tag--info{
+    color:var(--f-info);
+    border: 1px #bae6fd solid;
+    background-color: var(--f-info-bg);
+}
+
+.f-tag__small{
+    height: 20px;
+    padding: 0 6px;
+}
+.f-tag__large{
+    height: 26px;
+    padding: 0 10px;
+}
+
+.f-tag__closable{
+    cursor: pointer;
+    font-size: inherit;
+    color: inherit;
+    margin-left: 3px;
+}

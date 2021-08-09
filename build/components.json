@@ -1,5 +1,8 @@
 {
-  "button": "button/index.ts",
-  "modal": "modal/index.ts"
-
+    "button": "button/index.ts",
+    "modal": "modal/index.ts",
+    "tooltip": "tooltip/index.ts",
+    "tag": "tag/index",
+    "row": "",
+    "col":""
 }

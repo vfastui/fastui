@@ -1,5 +1,4 @@
 const path = require('path')
-
 async function config() {
     return {
         title: 'FastUI.dev',

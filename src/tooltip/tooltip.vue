@@ -71,7 +71,6 @@ export default defineComponent({
             default: 'dark',
             validator: (val: string) => ['dark', 'light'].includes(val)
         },
-        tooltipStyle: Object as PropType<CSSProperties>,
         delayShow: {
             type: Number,
             default: 50,

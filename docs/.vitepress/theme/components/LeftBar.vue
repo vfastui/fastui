@@ -27,6 +27,10 @@ const componentList = [
         name: '提示',
         link: 'tooltip.html'
     },
+    {
+        name: '标签',
+        link: 'tag.html'
+    },
 ]
 
 </script>
