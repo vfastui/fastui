@@ -12,7 +12,7 @@ deploy:
     provider: pages
     skip_cleanup: true
     local_dir: docs/.vitepress/dist
-    github_token: $travis_ci
+    github_token: $fastui_ci
     keep_history: true
     on:
         branch: main
