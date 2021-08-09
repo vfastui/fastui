@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+    - lts/*
+install:
+    - yarn install
+script:
+    - yarn doc:build
+branches:
+    only:
+        - main
+deploy:
+    provider: pages
+    skip_cleanup: true
+    local_dir: docs/.vitepress/dist
+    github_token: $travis_ci
+    keep_history: true
+    on:
+        branch: main
+cache:
+    apt: true
+    yarn: true
+    directories:
+        - node_modules
