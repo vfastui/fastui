@@ -8,7 +8,8 @@ async function config() {
             website: 'https://fastui.dev',
             nav: [
                 {text: 'Home', link: '/'},
-                {text: '组件', link: '/components/'},
+                {text: '快速使用', link: '/quick.html'},
+                {text: '组件', link: '/components/button.html'},
                 {text: 'Github', link: 'https://github.com/vfastui/fastui/'}
             ]
         },

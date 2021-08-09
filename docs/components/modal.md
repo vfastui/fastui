@@ -13,14 +13,22 @@ description: Modal Demo
 <FModal v-model="showModal" title="中文和英文">内容区<template #footer>
 <div style="text-align:right">
 <FButton type="primary" @click="showModal=false" size="small">关闭</FButton>
-</div></template></FModal>
+</div></template></FModal>  
 
-<script setup>
-import { ref } from 'vue';
-let showModal=ref(false);
-const open =()=>{
-    showModal.value=true
+```html
+<FButton @click="open">基本用法</FButton>
+<FModal v-model="showModal" title="中文和英文">内容区
+    <template #footer>
+        <div style="text-align:right">
+            <FButton type="primary" @click="showModal=false" size="small">关闭</FButton>
+        </div>
+    </template>
+</FModal>
+<script setup>import {ref} from 'vue';
+
+let showModal = ref(false);
+const open = () => {
+    showModal.value = true
 }
 </script>
-
-<div style="height:1000px"></div>
+```

@@ -33,7 +33,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, ref, CSSProperties, PropType, onMounted } from 'vue'
+import { defineComponent, computed, ref, onMounted } from 'vue'
 import { getUUID } from '@/_utils/utils'
 
 const placementList: string[] = [

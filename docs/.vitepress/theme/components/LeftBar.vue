@@ -1,35 +1,37 @@
 <template>
     <div class="leftbar" id='leftbar'>
+        <h3>组件导航</h3>
         <ul>
-            <li v-for="item in componentList"><a :href="item.link">{{item.name}}</a></li>
+            <li v-for="item in componentList"><a :href="withBase(item.link)">{{item.name}}</a></li>
         </ul>
     </div>
 </template>
 <script lang="ts" setup>
+import { withBase } from 'vitepress'
 const componentList = [
     {
         name: '按钮',
-        link: 'button.html'
+        link: './components/button.html'
     },
     {
         name: '图标',
-        link: 'icon.html'
+        link: './components/icon.html'
     },
     {
         name: '模态框',
-        link: 'modal.html'
+        link: './components/modal.html'
     },
     {
         name: '栅格',
-        link: 'grid.html'
+        link: './components/grid.html'
     },
     {
         name: '提示',
-        link: 'tooltip.html'
+        link: './components/tooltip.html'
     },
     {
         name: '标签',
-        link: 'tag.html'
+        link: './components/tag.html'
     },
 ]
 
@@ -43,7 +45,9 @@ const componentList = [
     font-size: 0.875rem;
     height: 200px;
     top:100px;
-    left:100px;
-    ul{list-style: none}
+    left:300px;
+    z-index: 1000;
+    ul{list-style: none;padding-left: 5px;}
 }
+
 </style>

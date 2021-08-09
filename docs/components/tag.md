@@ -23,11 +23,15 @@ description: FTag Demo
 ```
 
 ## 尺寸
+`size` ：`small`,`normal`,`large`
+
 <FTag size="small">默认</FTag>
 <FTag>默认</FTag>
 <FTag size="large">默认</FTag>
 
-## 关闭
+## 可关闭
+`closable`  
+<br>
 <FTag size="small" closable>默认</FTag>
 <FTag closable>默认</FTag>
 <FTag type="success" closable>默认</FTag>

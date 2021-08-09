@@ -4,8 +4,8 @@ import NewLayout from './components/NewLayout.vue'
 
 import Button from '@/button/button.vue'
 import Modal from '@/modal/modal.vue'
-import Row from '@/grid/row.vue'
-import Col from '@/grid/col.vue'
+import Row from '@/row/row.vue'
+import Col from '@/col/col.vue'
 import Tooltip from '@/tooltip/tooltip.vue'
 import Tag from '@/tag/Tag.vue'
 const components = {
