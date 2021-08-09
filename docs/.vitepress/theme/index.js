@@ -7,7 +7,7 @@ import Modal from '@/modal/modal.vue'
 import Row from '@/row/row.vue'
 import Col from '@/col/col.vue'
 import Tooltip from '@/tooltip/tooltip.vue'
-import Tag from '@/tag/Tag.vue'
+import Tag from '@/tag/tag.vue'
 const components = {
     FButton: Button,
     FModal: Modal,
