@@ -8,13 +8,15 @@ import Row from '@/row/row.vue'
 import Col from '@/col/col.vue'
 import Tooltip from '@/tooltip/tooltip.vue'
 import Tag from '@/tag/tag.vue'
+import Theme from '@/theme/theme.vue'
 const components = {
     FButton: Button,
     FModal: Modal,
     FRow:Row,
     FCol:Col,
     FTooltip:Tooltip,
-    FTag:Tag
+    FTag:Tag,
+    FTheme:Theme
 }
 
 const install = function (Vue) {

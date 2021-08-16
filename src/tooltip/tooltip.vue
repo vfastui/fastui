@@ -34,8 +34,7 @@
 
 <script lang="ts">
 import { defineComponent, computed, ref, onMounted } from 'vue'
-import { getUUID } from '@/_utils/utils'
-
+import { RandomId } from '@/_utils/utils'
 const placementList: string[] = [
     'top-left',
     'top-center',
@@ -50,12 +49,11 @@ const placementList: string[] = [
     'right-center',
     'right-bottom'
 ]
-
 export default defineComponent({
     props: {
         id: {
             type: String,
-            default: () => getUUID('f-tooltip')
+            default: () => RandomId('ftooltip', 10)
         },
         placement: {
             type: String,

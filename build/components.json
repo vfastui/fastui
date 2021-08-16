@@ -4,5 +4,6 @@
     "tooltip": "tooltip/index.ts",
     "tag": "tag/index",
     "row": "",
-    "col":""
+    "col":"",
+    "theme": ""
 }

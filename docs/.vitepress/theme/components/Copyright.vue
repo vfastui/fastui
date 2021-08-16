@@ -3,7 +3,7 @@
         MIT Licensed | Copyright © 2021 <a class="vitepress" :href="website">{{ webTitle }}</a
         ><br />
         Powered by
-        <a class="vitepress" target="_blank" href="//vitepress.vuejs.org/">VitePress</a>
+        <a class="vitepress" target="_blank" href="//vitepress.vuejs.org/">VitePress</a> &nbsp;<FTheme></FTheme>
     </div>
 </template>
 <script lang="ts" setup>

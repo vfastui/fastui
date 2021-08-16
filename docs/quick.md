@@ -15,26 +15,30 @@ npm install -D vite-plugin-components
 
 在vite.config中配置
 
+
 ```js
+
+import ViteComponents from 'vite-plugin-components'
+
 plugins: [
     vue(),
     WindiCSS(),
     ViteComponents({
-      globalComponentsDeclaration:true,
-      customComponentResolvers: [
-        (name) => {
-          if (name.startsWith("FF")) {
-            let partialName = name.slice(2);
-            return {
-              importName: partialName,
-              path: "@vfastui/fastui",
-              sideEffects: `@vfastui/fastui/dist/${partialName.toLowerCase()}/${partialName.toLowerCase()}.css`,
-            };
-          }
-        },
-      ],
+        globalComponentsDeclaration: true,
+        customComponentResolvers: [
+            (name) => {
+                if (name.startsWith("FF")) {
+                    let partialName = name.slice(2);
+                    return {
+                        importName: partialName,
+                        path: "@vfastui/fastui",
+                        sideEffects: `@vfastui/fastui/dist/${partialName.toLowerCase()}/${partialName.toLowerCase()}.css`,
+                    };
+                }
+            },
+        ],
     }),
-  ]
+]
 ```
 
 这样就不用导入也不用注册了

@@ -14,7 +14,8 @@ export default {
         tag: 'src/tag/tag.vue',
         row: 'src/row/row.vue',
         col: 'src/col/col.vue',
-        tooltip: 'src/tooltip/tooltip.vue'
+        tooltip: 'src/tooltip/tooltip.vue',
+        theme: 'src/theme/theme.vue'
     },
     external: 'vue',
     output: {

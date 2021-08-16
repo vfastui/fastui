@@ -20,6 +20,30 @@
     --tag-bg: #eff6ff;
 }
 
+.dark {
+    --c-divider: #333;
+    --c-divider-light: #333;
+    --c-divider-dark: rgba(84, 84, 88, 0.48);
+    --c-text:#999;
+
+    --c-brand: #3b82f6; /*  don't forget change the --tag-bg for tags */
+    --c-brand-light: #3b82f6;
+
+    --font-family-base: PingFangSC-regular, 'Microsoft Yahei', sans-serif;
+    --font-family-mono: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+
+    --header-height: 3.6rem;
+    --code-bg-color: #52525b;
+
+    /* pure theme color */
+    --li-dot-color: #737373;
+    --title-color: #334155;
+    --date-color: #64748b;
+    --date-font-family: Georgia, sans-serif;
+    --tag-bg: #eff6ff;
+}
+
+
 /*theme reset*/
 a:link {
     text-decoration: none;
@@ -37,7 +61,11 @@ h3 {
 .container {
     max-width: 58rem !important;
 }
+
 /* pc + mobile start */
+.sidebar {
+    background: transparent !important;
+}
 .sidebar-links {
     padding: 0.5rem 0;
 }
@@ -114,6 +142,9 @@ h3 {
 /*pc -  adjust the header and sidebar's position */
 @media screen and (min-width: 720px) {
     :root {
+        --header-height: 5rem !important;
+    }
+    .dark {
         --header-height: 5rem !important;
     }
     .nav-bar-title {

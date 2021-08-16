@@ -25,6 +25,9 @@ async function config() {
                 host: 'bidev.vipkid.com.cn',
                 force: true,
                 cors: true
+            },
+            optimizeDeps:{
+                include:['vue']
             }
         }
         /*

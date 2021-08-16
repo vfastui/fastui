@@ -17,15 +17,14 @@
 </template>
 
 <script lang="ts">
+import { RandomId } from '@/_utils/utils'
 import { defineComponent, reactive, toRefs, onMounted, onBeforeUnmount, watch } from 'vue'
-import { getUUID } from '@/_utils/utils'
-
 export default defineComponent({
     props: {
         modelValue: Boolean,
         id: {
             type: String,
-            default: () => getUUID('FModal')
+            default: () => RandomId('fmodal', 10)
         },
         title: {
             type: String,
@@ -58,7 +57,6 @@ export default defineComponent({
         watch(
             () => props.modelValue,
             (newV: boolean) => {
-                console.log(newV)
                 newV ? open() : hide()
             }
         )

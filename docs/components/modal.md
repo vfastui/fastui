@@ -15,6 +15,14 @@ description: Modal Demo
 <FButton type="primary" @click="showModal=false" size="small">关闭</FButton>
 </div></template></FModal>  
 
+<script setup>
+import {ref} from 'vue';
+let showModal = ref(false);
+const open = () => {
+showModal.value = true
+}
+</script>
+
 ```html
 <FButton @click="open">基本用法</FButton>
 <FModal v-model="showModal" title="中文和英文">内容区
