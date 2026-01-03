@@ -3,7 +3,7 @@ page: true
 title: FTag
 description: FTag Demo
 ---
-# 按钮
+# 标签
 
 ## 基本用法
 <FTag>默认</FTag>
