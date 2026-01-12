@@ -1,8 +1,9 @@
 ---
 page: true
-title: 快速使用
+title: 快速开始
 description: 如何使用 fastui
 ---
+# 快速开始
 ## 安装
 ```shell
 npm install -S @vfastui/fastui

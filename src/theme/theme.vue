@@ -1,5 +1,5 @@
 <template>
-    <FFButton size="mini" @click="toggleTheme">切换主题</FFButton>
+    <FFButton size="mini" @click="toggleTheme">切换主题{{ isDark }}</FFButton>
 </template>
 
 <script lang="ts">
@@ -19,7 +19,7 @@ export default defineComponent({
             valueDark: 'dark',
             valueLight: 'light'
         })
-        const toggleTheme = useToggle(isDark)
+        const toggleTheme = useToggle(!isDark)
         return {
             isDark,
             toggleTheme

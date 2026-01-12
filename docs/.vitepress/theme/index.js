@@ -1,6 +1,5 @@
 import DefaultTheme from 'vitepress/theme'
 
-import NewLayout from './components/NewLayout.vue'
 
 import Button from '@/button/button.vue'
 import Modal from '@/modal/modal.vue'
@@ -8,7 +7,6 @@ import Row from '@/row/row.vue'
 import Col from '@/col/col.vue'
 import Tooltip from '@/tooltip/tooltip.vue'
 import Tag from '@/tag/tag.vue'
-import Theme from '@/theme/theme.vue'
 const components = {
     FButton: Button,
     FModal: Modal,
@@ -16,7 +14,6 @@ const components = {
     FCol:Col,
     FTooltip:Tooltip,
     FTag:Tag,
-    FTheme:Theme
 }
 
 const install = function (Vue) {
@@ -28,8 +25,7 @@ const install = function (Vue) {
 import './custom.css'
 
 export default {
-    ...DefaultTheme,
-    Layout: NewLayout,
+     ...DefaultTheme,
     enhanceApp({ app }) {
         // register global compoment
         app.use(install)
