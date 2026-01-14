@@ -31,7 +31,8 @@ async function config() {
                         { text: '模态框', link: '/components/modal.html' },
                         { text: '栅格', link: '/components/grid.html' },
                         { text: '提示', link: '/components/tooltip.html' },
-                        { text: '标签', link: '/components/tag.html' }
+                        { text: '标签', link: '/components/tag.html' },
+                        { text: '标签页', link: '/components/tabs.html' }
                     ]
                 }
             ]

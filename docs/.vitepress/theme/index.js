@@ -7,13 +7,16 @@ import Row from '@/row/row.vue'
 import Col from '@/col/col.vue'
 import Tooltip from '@/tooltip/tooltip.vue'
 import Tag from '@/tag/tag.vue'
+import { Tabs, TabPane } from '@/tabs'
 const components = {
     FButton: Button,
     FModal: Modal,
-    FRow:Row,
-    FCol:Col,
-    FTooltip:Tooltip,
-    FTag:Tag,
+    FRow: Row,
+    FCol: Col,
+    FTooltip: Tooltip,
+    FTag: Tag,
+    FTabs: Tabs,
+    FTabPane: TabPane
 }
 
 const install = function (Vue) {
@@ -25,7 +28,7 @@ const install = function (Vue) {
 import './custom.css'
 
 export default {
-     ...DefaultTheme,
+    ...DefaultTheme,
     enhanceApp({ app }) {
         // register global compoment
         app.use(install)

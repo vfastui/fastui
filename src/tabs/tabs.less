@@ -1,0 +1,125 @@
+.f-tabs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &--top {
+        flex-direction: column;
+        .f-tabs-nav {
+            margin-bottom: 16px;
+            border-bottom: 1px solid #e5e6eb;
+        }
+    }
+
+    &--bottom {
+        flex-direction: column-reverse;
+        .f-tabs-nav {
+            margin-top: 16px;
+            border-top: 1px solid #e5e6eb;
+        }
+    }
+
+    &--left {
+        flex-direction: row;
+        .f-tabs-nav {
+            margin-right: 16px;
+            border-right: 1px solid #e5e6eb;
+            flex-direction: column;
+        }
+    }
+
+    &--right {
+        flex-direction: row-reverse;
+        .f-tabs-nav {
+            margin-left: 16px;
+            border-left: 1px solid #e5e6eb;
+            flex-direction: column;
+        }
+    }
+
+    &-nav {
+        display: flex;
+        position: relative;
+        user-select: none;
+    }
+
+    &-tab {
+        padding: 8px 16px;
+        cursor: pointer;
+        position: relative;
+        font-size: 14px;
+        color: #4e5969;
+        transition: color 0.2s;
+        white-space: nowrap;
+
+        &:hover {
+            color: #165dff;
+        }
+
+        &.is-active {
+            color: #165dff;
+            font-weight: 500;
+        }
+
+        &.is-disabled {
+            color: #c9cdd4;
+            cursor: not-allowed;
+        }
+    }
+
+    // Line Style (Default)
+    &--line {
+        .f-tabs-tab.is-active {
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -1px;
+                left: 16px; // match padding
+                right: 16px;
+                height: 2px;
+                background-color: #165dff;
+            }
+        }
+        
+        &.f-tabs--left, &.f-tabs--right {
+            .f-tabs-tab.is-active::after {
+                bottom: 10%;
+                top: 10%;
+                left: auto;
+                right: -1px; // for left tabs
+                width: 2px;
+                height: auto;
+            }
+        }
+        &.f-tabs--right {
+            .f-tabs-tab.is-active::after {
+                right: auto;
+                left: -1px;
+            }
+        }
+    }
+
+    // Card Style
+    &--card {
+        .f-tabs-nav {
+            border-bottom: 1px solid #e5e6eb;
+            background-color: #f2f3f5;
+            padding: 4px 4px 0;
+            border-radius: 4px 4px 0 0;
+        }
+        .f-tabs-tab {
+            margin-right: 2px;
+            border-radius: 4px 4px 0 0;
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-bottom: none;
+            
+            &.is-active {
+                background-color: #fff;
+                color: #165dff;
+            }
+        }
+    }
+    
+    // Capsule/Round styles can be added similarly
+}
