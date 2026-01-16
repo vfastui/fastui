@@ -1,3 +1,5 @@
+@import '../theme.less';
+
 .f-tabs {
     display: flex;
     flex-direction: column;
@@ -5,34 +7,38 @@
 
     &--top {
         flex-direction: column;
+
         .f-tabs-nav {
             margin-bottom: 16px;
-            border-bottom: 1px solid #e5e6eb;
+            border-bottom: 1px solid var(--f-border-color);
         }
     }
 
     &--bottom {
         flex-direction: column-reverse;
+
         .f-tabs-nav {
             margin-top: 16px;
-            border-top: 1px solid #e5e6eb;
+            border-top: 1px solid var(--f-border-color);
         }
     }
 
     &--left {
         flex-direction: row;
+
         .f-tabs-nav {
             margin-right: 16px;
-            border-right: 1px solid #e5e6eb;
+            border-right: 1px solid var(--f-border-color);
             flex-direction: column;
         }
     }
 
     &--right {
         flex-direction: row-reverse;
+
         .f-tabs-nav {
             margin-left: 16px;
-            border-left: 1px solid #e5e6eb;
+            border-left: 1px solid var(--f-border-color);
             flex-direction: column;
         }
     }
@@ -48,21 +54,21 @@
         cursor: pointer;
         position: relative;
         font-size: 14px;
-        color: #4e5969;
+        color: var(--f-font-color);
         transition: color 0.2s;
         white-space: nowrap;
 
         &:hover {
-            color: #165dff;
+            color: var(--f-primary);
         }
 
         &.is-active {
-            color: #165dff;
+            color: var(--f-primary);
             font-weight: 500;
         }
 
         &.is-disabled {
-            color: #c9cdd4;
+            color: var(--f-disabled);
             cursor: not-allowed;
         }
     }
@@ -77,11 +83,12 @@
                 left: 16px; // match padding
                 right: 16px;
                 height: 2px;
-                background-color: #165dff;
+                background-color: var(--f-primary);
             }
         }
-        
-        &.f-tabs--left, &.f-tabs--right {
+
+        &.f-tabs--left,
+        &.f-tabs--right {
             .f-tabs-tab.is-active::after {
                 bottom: 10%;
                 top: 10%;
@@ -91,6 +98,7 @@
                 height: auto;
             }
         }
+
         &.f-tabs--right {
             .f-tabs-tab.is-active::after {
                 right: auto;
@@ -102,24 +110,25 @@
     // Card Style
     &--card {
         .f-tabs-nav {
-            border-bottom: 1px solid #e5e6eb;
-            background-color: #f2f3f5;
+            border-bottom: 1px solid var(--f-border-color);
+            background-color: var(--f-primary-bg);
             padding: 4px 4px 0;
             border-radius: 4px 4px 0 0;
         }
+
         .f-tabs-tab {
             margin-right: 2px;
             border-radius: 4px 4px 0 0;
             background-color: transparent;
             border: 1px solid transparent;
             border-bottom: none;
-            
+
             &.is-active {
-                background-color: #fff;
-                color: #165dff;
+                background-color: var(--f-default-bg);
+                color: var(--f-primary);
             }
         }
     }
-    
+
     // Capsule/Round styles can be added similarly
 }
